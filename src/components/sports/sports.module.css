@@ -1,0 +1,127 @@
+.Sports {
+    padding: 2rem;
+    color: var(--white);
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--white);
+}
+.videoContainer {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  min-height: 400px; /* ou height: 60vh; para impacto maior */
+  height: 90vh;
+  max-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100vw;
+  min-height: 100%;
+  width: auto;
+  height: 120%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleVideo {
+  font-size: 3.8rem;
+  font-weight: 700;
+  margin: 0 auto;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin: 0.5rem auto 0;
+  font-weight: 400;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 2rem;
+  align-items: center;
+}
+
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px dashed var(--claret);
+  border-radius: 10px;
+  width: 284px;
+}
+
+.cardWrapper:hover{
+  border: 1px solid var(--claret);
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in;
+  filter: saturate(0);
+}
+
+.cardWrapper img {
+  width: 282px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.cardWrapper h1 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: var(--claret);
+}
+
+.cardWrapper button {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.cardWrapper button:hover {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+}

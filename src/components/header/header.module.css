@@ -1,0 +1,137 @@
+.Header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  scroll-behavior: smooth;
+}
+
+.wrapperHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 80px;
+  filter: invert(1);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: none;
+}
+
+.ulMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  border-radius: 35px;
+  padding: 10px 20px;
+  z-index: 1000;
+  background-color: #e9e9e9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.navLi a {
+  color: black;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user a {
+  color: var(--black);
+}
+
+.user a:hover {
+  color: var(--orange);
+}
+
+.loginButton {
+  background: none;
+  border: none;
+  color: var(--black);
+  padding: 10px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 35px;
+  z-index: 1000;
+  background-color: #e9e9e9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#buttonMobile {
+  display: none;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  #buttonMobile {
+    display: flex;
+    background: transparent;
+    align-items: flex-end;
+    border: none;
+  }
+  #menuIcons {
+    width: 20px;
+    height: 20px;
+  }
+  .active nav {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 3;
+  }
+  .active .ulMenu {
+    display: flex;
+    padding: 16px 20px;
+    gap: 32px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .active .navLi {
+    text-align: center;
+  }
+  .logo {
+    font-size: 20px;
+    display: block;
+    gap: 20px;
+  }
+  .loginButton {
+    display: none;
+  }
+  .ulMenu {
+    background-color: none;
+    box-shadow: none;
+    border-radius: none;
+  }
+}

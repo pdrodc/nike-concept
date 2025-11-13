@@ -1,0 +1,99 @@
+.timelineSection {
+  padding: 2rem;
+  color: #111;
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--white);
+}
+
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-left: 4px solid #111;
+}
+
+.timelineItem {
+  position: relative;
+  padding: 2rem 0 2rem 2rem;
+  background: #f9f9f9;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  max-width: 500px;
+}
+
+.timelineItem::before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 2.2rem;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+/* Conteúdo do card */
+.content {
+  margin-left: 1rem;
+  text-align: left;
+  padding: 0;
+}
+
+.year {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #e63946;
+  margin-bottom: 0.3rem;
+  text-align: left;
+}
+
+.eventTitle {
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  text-align: left;
+}
+
+.description {
+  font-weight: 400;
+  color: #555;
+  margin: 0;
+  text-align: left;
+}
+.connector,
+.imageWrapper {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .timelineSection {
+    padding: 1.5rem 0.5rem;
+    max-width: 98vw;
+  }
+  .timelineItem {
+    padding-left: 1.2rem;
+    max-width: 97vw;
+  }
+  .content {
+    margin-left: 0.5rem;
+    max-width: 97vw;
+  }
+}
+
+/* Para mobile, layout continua vertical */
+@media (max-width: 480px) {
+  .timelineItem {
+    padding-left: 1rem;
+    max-width: 99vw;
+  }
+}
