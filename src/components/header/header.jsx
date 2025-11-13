@@ -1,4 +1,4 @@
-import styles from "./Header.module.css";
+import styles from "./header.module.css";
 import Logo from "../../assets/logo.png";
 import LoginModal from "../loginmodal/loginmodal";
 import { User } from "lucide-react";
@@ -58,3 +58,4 @@ const Header = () => {
 };
 
 export default Header;
+
