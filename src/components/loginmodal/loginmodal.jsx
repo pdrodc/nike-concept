@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./LoginModal.module.css";
+import styles from "./loginmodal.module.css";
 import Logo from "../../assets/logo.png";
 
 function LoginModal({ onClose }) {
@@ -46,3 +46,4 @@ function LoginModal({ onClose }) {
 }
 
 export default LoginModal;
+
